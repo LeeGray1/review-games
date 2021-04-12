@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "review-games": {
+    "client-side-reviews": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/review-games",
+            "outputPath": "dist/client-side-reviews",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -39,6 +40,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
+              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -61,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "review-games:build"
+            "browserTarget": "client-side-reviews:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "review-games:build:production"
+              "browserTarget": "client-side-reviews:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "review-games:build"
+            "browserTarget": "client-side-reviews:build"
           }
         },
         "test": {
@@ -109,16 +111,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "review-games:serve"
+            "devServerTarget": "client-side-reviews:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "review-games:serve:production"
+              "devServerTarget": "client-side-reviews:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "review-games"
+  "defaultProject": "client-side-reviews",
+  "cli": {
+    "analytics": false
+  }
 }

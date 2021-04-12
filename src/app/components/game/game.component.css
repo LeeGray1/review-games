@@ -1,0 +1,14 @@
+.border{
+
+    margin-top:2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1%;
+}
+.gameImg{
+    padding-right: 15%;
+}
+.box{
+    border: 4px solid black;
+}

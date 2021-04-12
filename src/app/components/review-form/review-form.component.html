@@ -1,0 +1,91 @@
+<p>review-form works!</p>
+
+{{message}}
+
+
+  <div class="border border-primary rounded">
+    <button type="button" class="close" aria-label="Close" (click)="closeForm()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  <form [formGroup]="reviewForm" (ngSubmit) = "onSubmit()">
+    <div class="container review-form">
+        <div class="row">
+            <div class="col-md-6">
+                <div class=form-group>
+                    <input 
+                    id="reviewer"
+                    type="text"
+                    formControlName="reviewer"
+                    class= "form-control"
+                    placeholder="enter your user name"
+                    >
+                </div>
+                <div class=form-group>
+                    <input 
+                    id="date"
+                    type="date"
+                    formControlName="date"
+                    class= "form-control"
+                    placeholder="enter the date"
+                    >
+                </div>
+                <div class=form-group>
+                    <input 
+                    id="rating"
+                    type="text"
+                    formControlName="rating"
+                    class= "form-control"
+                    placeholder="enter the rating"
+                    >
+                </div>
+                <div class="form-group">
+                    <input
+                    id="game"
+                    type="text"
+                    formControlName="game"
+                    class="form-control"
+                    placeholder="enter the game"
+                    >
+
+                </div>
+                <button 
+                    type="submit"
+                     [disabled]="!reviewForm.valid"
+                     class="btnReview"
+                    >
+                    submit
+                    </button>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <textarea
+                    id="review"
+                    type="text"
+                    placeholder="Enter your Review"
+                    formControlName="review"
+                    style="width: 100%; height: 200px;"
+                    maxlength="300"
+                    class="form-control"
+                    ></textarea>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div *ngIf="reviewer.invalid && reviewer.touched" class="alert alert-danger">
+        your user name is required
+    </div>
+    <div *ngIf="date.invalid && date.touched" class="alert alert-danger">
+        please enter the date
+    </div>
+    <div *ngIf="rating.invalid && rating.touched" class="alert alert-danger">
+        please enter a valid rating between 0-5
+    </div>
+    <div *ngIf="review.invalid && review.touched" class="alert alert-danger">
+        please enter a review
+    </div>
+    <div *ngIf="game.invalid && game.touched" class="alert alert-danger">
+        please enter a vaild game
+    </div>
+  </form>
+</div>

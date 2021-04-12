@@ -1,0 +1,18 @@
+.btnReview {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 3%;
+    background: #005f18;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;  
+}
+.border{
+
+    margin-top:2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1%;
+}

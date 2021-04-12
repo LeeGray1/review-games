@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { from } from 'rxjs';
+import { User } from './interfaces/user';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'review-games';
+  title = 'client-side-reviews';
+
+  user: User;
+
+  constructor() {
+
+  }
+
+  // logout() {
+  //   this.userService.logout();
+  // }
 }

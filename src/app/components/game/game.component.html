@@ -1,0 +1,47 @@
+<div class="container">
+    <form>
+      <div class="form-group">
+        <div class="input-group">
+          <input [formControl]="searchText" class="form-control" type="text" name="search" autocomplete="off" placeholder="search games" span>
+            <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary" (click)="searchForGames()" [disabled]="!searchText.valid"> Search </button> 
+          </span>
+           </div>
+      </div>
+    </form>
+      <div class="container -1">
+         
+        <div *ngFor="let game of games">
+
+          <div class="border border-primary rounded">
+            <div class="row">
+              <div class="col-md-4">
+                <img class="gameImg" src="{{game.background_image}}" [style.width.px]="gameImageWidth" [style.height.px]="gameImageHeight">
+
+              </div> 
+              <div class="col-md-8 ">
+                <table class="table table-bordered table-striped">
+                  <tbody>
+                    <tr>
+                      <th>Name: {{game.name}}</th>
+                    </tr>
+                    <!-- <tr>
+                      <th>Platforms: {{game.platforms}}</th>
+                    </tr> -->
+                    <tr>
+                      <th>Release Date: {{game.released}}</th>
+                    </tr>
+                    <tr>
+                      <th>Worldwide Rating: {{game.rating}}</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+          <div class="text-center">If you want to add a review, please click add review</div>
+        </div>
+      </div>    
+</div>
+  
