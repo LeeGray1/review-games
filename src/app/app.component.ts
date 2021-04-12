@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { from } from 'rxjs';
-import { User } from './interfaces/user';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +8,6 @@ import { User } from './interfaces/user';
 })
 export class AppComponent {
   title = 'client-side-reviews';
-
-  user: User;
 
   constructor() {
 
