@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { NgAuthService } from "../../ng-auth.service";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-verify-email',
+  templateUrl: './verify-email.component.html',
+  styleUrls: ['./verify-email.component.css']
 })
-export class HomeComponent implements OnInit {
+
+export class VerifyEmailComponent implements OnInit {
 
   constructor(public ngAuthService: NgAuthService) { }
 

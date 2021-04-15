@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { from } from 'rxjs';
+import { NgAuthService } from "./ng-auth.service";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { from } from 'rxjs';
 export class AppComponent {
   title = 'client-side-reviews';
 
-  constructor() {
+  constructor(public ngAuthService: NgAuthService) {
 
   }
 
