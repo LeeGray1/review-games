@@ -1,0 +1,29 @@
+
+  .review-form{
+    background: #fff;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+.review-form .form-control{
+    border-radius:1rem;
+    width: 50;
+
+    
+}
+
+.btnReview {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.border{
+
+    margin-top:2%;
+    margin-bottom: 2%;
+}

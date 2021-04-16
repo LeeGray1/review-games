@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { ReviewListComponent } from './components/review-list/review-list.component';
+import { ReviewPageComponent } from './components/review-page/review-page.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -12,7 +12,7 @@ import { AuthGuard } from "./auth.guard";
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'reviews', component: ReviewListComponent },
+  { path: 'reviews', component: ReviewPageComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent, },

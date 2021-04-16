@@ -12,24 +12,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { GameComponent } from './components/game/game.component';
-import { ReviewComponent } from './components/review/review.component';
-import { ReviewListComponent } from './components/review-list/review-list.component';
-import { ReviewFormComponent } from './components/review-form/review-form.component';
+import { ReviewPageComponent } from './components/review-page/review-page.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { ReviewListComponent } from './components/review-list/review-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
-    ReviewComponent,
     ReviewListComponent,
-    ReviewFormComponent,
+    ReviewPageComponent,
     HomeComponent,
     ProfileComponent,
     ForgotPasswordComponent,
