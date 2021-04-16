@@ -8,34 +8,7 @@
   <app-game></app-game>
   <!-- <app-review-form></app-review-form> -->
   <div class="container">
+  <app-review-form></app-review-form>
   
-    <button (click)="show = !show">{{show? 'Hide' : 'Add a Review'}}</button>
-
-<div *ngIf="show">
-  <form>
-    <div class="two-by-two">
-      <label>Game</label>
-      <input type="text" name="game" placeholder="Enter the games name" #game>
-    
-      <label>rating</label>
-      <input type="number" name="rating" placeholder="0" #rating>
-    </div>
-    
-    <div class="row">
-      <label>Date</label>
-      <input type="text" name="date" placeholder="Enter the date of game release" #date>
-      
-      <label>Review</label>
-    <input type="text" name="review" placeholder="Write your review" #review>
-  </div>
-  <label>Reviewer</label>
-      <input type="text" name="reviewer" placeholder="Enter your Name" #reviewer>
-    
-    
-    <button type="submit" (click)="addTheReview(reviewer.value, game.value, rating.value, review.value, date.value)">
-      Add the review
-    </button>
-  </form>
-</div>
   </div>
 </div>

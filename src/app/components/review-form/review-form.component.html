@@ -1,0 +1,43 @@
+<button class="btn btn-primary mb-3" (click)="show = !show">{{show? 'Close' : 'Add a Review'}}</button>
+
+<div *ngIf="show">
+  <form class="border">
+    <div class="row">
+      <div class="col-md-4 pl-4">
+        <div class="form-group">
+          <label>Game: </label>
+          <input type="text" name="game" placeholder="Enter the games name" #game>
+        </div>
+        <div class="form-group">
+          <label>Rating: </label>
+          <input type="number" name="rating" placeholder="0" #rating>
+        </div>
+        <div class="form-group">
+          <label>Date: </label>
+          <input type="text" name="date" placeholder="Enter games release date" #date>
+        </div>
+        <div class="form-group">
+          <label>Reviewer: </label>
+          <input type="text" name="reviewer" placeholder="Enter your Name" #reviewer>
+        </div>
+        <button class="btn btn-primary" type="submit" (click)="addTheReview(reviewer.value, game.value, rating.value, review.value, date.value)">
+          Add the review
+        </button>
+      </div>
+      <div class="col-md-8">
+        <div class="form-group">
+        <label>Review: </label>
+        <textarea style="width: 98%;" rows="4" type="text" name="review" placeholder="pls wrk" #review>
+        </textarea>
+      </div>
+      </div>
+    </div>
+    
+  </form>
+</div>
+
+<!-- <div class="col">
+  <label>Review: </label>
+  <textarea rows="8" type="text" name="review" placeholder="Write your review" #review>
+  </textarea>
+</div> -->
