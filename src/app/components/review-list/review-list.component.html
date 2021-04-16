@@ -1,4 +1,4 @@
-<button (click)="show = !show">{{show? 'Hide' : 'Add a Review'}}</button>
+<!-- <button (click)="show = !show">{{show? 'Hide' : 'Add a Review'}}</button>
 
 <div *ngIf="show">
     <form>
@@ -21,8 +21,10 @@
             Add the review
         </button>
     </form>
-</div>
+</div> -->
+
 
 <div class="container">
+    <h1 class="h1 text-center">User Game Reviews</h1>
     <app-review-page *ngFor="let reviewData of reviewsData" [reviewData]="reviewData"></app-review-page>
 </div>

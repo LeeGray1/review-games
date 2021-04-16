@@ -6,24 +6,36 @@
 
   <h1 class="h1 text-center">Search for a game</h1>
   <app-game></app-game>
+  <!-- <app-review-form></app-review-form> -->
   <div class="container">
   
-    <!-- <button (click)="openAddReview()" *ngIf="!showReviewForm"
-      class="btn btn-lg btn-outline-primary" >Add a Review
-    </button>
-  
-    <button (click)="openEditReview()" *ngIf="!showReviewForm" [disabled]="!currentReview"
-    class="btn btn-lg btn-outline-primary" > edit 
-    </button> -->  
+    <button (click)="show = !show">{{show? 'Hide' : 'Add a Review'}}</button>
+
+<div *ngIf="show">
+  <form>
+    <div class="two-by-two">
+      <label>Game</label>
+      <input type="text" name="game" placeholder="Enter the games name" #game>
     
-     <!-- <app-review-form *ngIf="showReviewForm"
-      (reviewFormClose)="reviewFormClose($event)" [review]="currentReview">
-     </app-review-form>
-  
-      <p>
-        <ngb-alert *ngIf="message" [dismissible]="true">
-          <strong>Warning!</strong> {{message}}
-        </ngb-alert>
-      </p> -->
+      <label>rating</label>
+      <input type="number" name="rating" placeholder="0" #rating>
+    </div>
+    
+    <div class="row">
+      <label>Date</label>
+      <input type="text" name="date" placeholder="Enter the date of game release" #date>
+      
+      <label>Review</label>
+    <input type="text" name="review" placeholder="Write your review" #review>
+  </div>
+  <label>Reviewer</label>
+      <input type="text" name="reviewer" placeholder="Enter your Name" #reviewer>
+    
+    
+    <button type="submit" (click)="addTheReview(reviewer.value, game.value, rating.value, review.value, date.value)">
+      Add the review
+    </button>
+  </form>
+</div>
   </div>
 </div>

@@ -1,29 +1,46 @@
 
 <div class="container">
-    <h1 class="h1 text-center">User Game Reviews</h1>
-
-    <div class="container">
+    <!-- <div class="container">
       <div class="row border">
-        <div class="col-3">
-          {{reviewData.game}}
+        <div class="col-1">
+          Game Name: {{reviewData.game}}
         </div>
 
-        <div class="col-3">
-          {{reviewData.rating}}
+        <div class="col-1">
+          Rating: {{reviewData.rating}}
         </div>
 
-        <div class="col-3">
-          {{reviewData.date}} 
+        <div class="col-1">
+          Release Date: {{reviewData.date}} 
         </div>
 
-        <div class="col-3">
-          {{reviewData.review}}
+        <div class="col-1">
+          Review: {{reviewData.review}}
         </div>
 
-        <div class="col-3">
-          {{reviewData.reviewer}}
+        <div class="col-1">
+          Reviewer: {{reviewData.reviewer}}
         </div>
       </div>
-    </div>
+    </div> -->
+    <table class="table table-bordered table-striped mb-5">
+      <tbody>
+        <tr>
+          <th>Game Name: {{reviewData.game}}</th>
+        </tr>
+        <tr>
+          <th>Rating: {{reviewData.rating}}</th>
+        </tr>
+        <tr>
+          <th>Release Date: {{reviewData.release}}</th>
+        </tr>
+        <tr>
+          <th>Review: {{reviewData.review}}</th>
+        </tr>
+        <tr>
+          <th>Reviewer: {{reviewData.reviewer}}</th>
+        </tr>
+      </tbody>
+    </table>
     <!-- <app-review-list></app-review-list> -->
   </div>
