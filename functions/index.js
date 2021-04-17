@@ -2,20 +2,22 @@ const functions = require('firebase-functions');
 const admin = require("firebase-admin");
 admin.initializeApp();
 
-exports.addAdminRole = functions.https.onCall((data) =>{
+exports.addAdminRole = functions.https.onCall((data) => {
 
+    // add custom claim to user
+    // setCustomerClaims is provided by firebase SDK functionality
     return admin.auth().getUserByEmail(data.email).then(user =>{
-        return admin.auth().setCustomerUserClaims(user.uid, {
-            admin: true
-        });
+        return admin.auth().setCustomUserClaims(user.uid, {
+            admin:true
+        })
     }).then(() => {
-        return {
-            message: `Success! ${data.email} has been made an admin`
+        return{
+            message: `${data.email} setup admin`
         }
     }).catch(err => {
         return err;
-    });
-});
+    })
+})
 
 exports.removeAdminRole = functions.https.onCall((data) => {
 
