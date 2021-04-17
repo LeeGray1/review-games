@@ -14,7 +14,7 @@
     </div>
   </div>
   
-  <div class="container mt-5" >
+  <div class="container mt-5" *ngIf="ngAuthService.userAdmin">
     <span><h1>Add or remove admins</h1></span>
     <form>
       <input style="width: 350px;" class="mb-3" type="text" id="email" placeholder="Enter in user email"  required #email><br>
