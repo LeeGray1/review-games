@@ -26,5 +26,7 @@
 
 <div class="container">
     <h1 class="h1 text-center">User Game Reviews</h1>
-    <app-review-page *ngFor="let reviewData of reviewsData" [reviewData]="reviewData"></app-review-page>
+    <div class="borders">        
+        <app-review-page *ngFor="let reviewData of reviewsData" [reviewData]="reviewData"></app-review-page>
+    </div>
 </div>

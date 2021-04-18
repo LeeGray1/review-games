@@ -6,19 +6,19 @@
       <div class="col-md-4 pl-4">
         <div class="form-group">
           <label class="mr-1">Game: </label>
-          <input type="text" style="width: 205px;" name="game" placeholder="Enter the games name" #game>
+          <input type="text" style="width: 100%;" name="game" placeholder="Enter the games name" #game>
         </div>
         <div class="form-group">
           <label class="mr-1">Rating: </label>
-          <input type="number" style="width: 200px;" min="0" max="5" name="rating" placeholder="Add a rating between 0-5" #rating>
+          <input type="number" style="width: 100%;" min="0" max="5" name="rating" placeholder="Add a rating between 0-5" #rating>
         </div>
         <div class="form-group">
           <label class="mr-1">Date: </label>
-          <input type="text" style="width: 215px;" name="date" placeholder="Enter games release date" #date>
+          <input type="text" style="width: 100%;" name="date" placeholder="Enter games release date" #date>
         </div>
         <div class="form-group">
           <label class="mr-1">Reviewer: </label>
-          <input type="text" name="reviewer" placeholder="Enter your Name" #reviewer>
+          <input type="text" name="reviewer" style="width: 100%;" placeholder="Enter your Email" #reviewer>
         </div>
         <button class="btn btn-primary" type="submit" (click)="addTheReview(game.value, rating.value, date.value, review.value, reviewer.value)">
           Add the review
