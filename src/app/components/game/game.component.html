@@ -2,9 +2,9 @@
     <form>
       <div class="form-group">
         <div class="input-group">
-          <input [formControl]="searchText" class="form-control" type="text" name="search" autocomplete="off" placeholder="search games" span>
+          <input [formControl]="searchText" class="form-control mr-1 round-nav" type="text" name="search" autocomplete="off" placeholder="search games" span>
             <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary md-button" (click)="searchForGames()" [disabled]="!searchText.valid"> Search </button> 
+            <button type="submit" class="btn btn-primary md-button round" (click)="searchForGames()" [disabled]="!searchText.valid"> Search </button> 
           </span>
            </div>
       </div>

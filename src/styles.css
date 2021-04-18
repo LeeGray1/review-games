@@ -418,4 +418,6 @@
     max-width: 150px;
   }
   
-  
+  .round{
+    border-radius: 10px;
+}
